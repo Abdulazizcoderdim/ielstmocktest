@@ -1,10 +1,13 @@
 import { Award, CheckCircle, RotateCcw, XCircle } from "lucide-react";
+import ReactConfetti from "react-confetti";
 import { useNavigate } from "react-router-dom";
+import { useWindowSize } from "react-use";
 import { useTestStore } from "../store/testStore";
 
 const ResultPage = () => {
   const navigate = useNavigate();
   const { testResult, resetTest } = useTestStore();
+  const { width, height } = useWindowSize();
 
   const handleRetakeTest = () => {
     resetTest();
@@ -52,6 +55,20 @@ const ResultPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      {testResult.percentage >= 80 && (
+        <ReactConfetti
+          width={width}
+          height={height}
+          recycle={false}
+          gravity={0.3}
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            pointerEvents: "none",
+          }}
+        />
+      )}
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-2xl mx-auto">
           {/* Header */}
