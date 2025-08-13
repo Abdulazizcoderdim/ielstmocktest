@@ -1,8 +1,19 @@
 # IELTS Mock Test Mini Platform API
 
-## Asosiy URL
+## Live Demo Links
 
-http://localhost:5000/api
+- **Test Page**: [https://ieltsmocktestpro.vercel.app](https://ieltsmocktestpro.vercel.app)  
+  Bu sahifada foydalanuvchilar IELTS mock testini ishlashlari mumkin.
+
+- **Result Page**: [https://ieltsmocktestpro.vercel.app/result](https://ieltsmocktestpro.vercel.app/result)  
+  Bu sahifada test yakunida foydalanuvchilarga to‘g‘ri javoblar soni va foiz ko‘rinishida natija ko‘rsatiladi.
+
+- **Admin Page (CRUD)**: [https://ieltsmocktestpro.vercel.app/admin-page](https://ieltsmocktestpro.vercel.app/admin-page)  
+  Bu sahifada administratorlar savollarni qo‘shish, tahrirlash va o‘chirish imkoniyatiga ega.
+
+## Asosiy URL (api)
+
+https://ielstmocktestapi.vercel.app/api
 
 ---
 
