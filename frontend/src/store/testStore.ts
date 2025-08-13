@@ -5,7 +5,7 @@ export const useTestStore = create<TestStore>((set, get) => ({
   questions: [],
   answers: [],
   currentQuestionIndex: 0,
-  timeRemaining: 600, // 10 min
+  timeRemaining: 600,
   isLoading: false,
   error: null,
   testResult: null,
@@ -21,11 +21,9 @@ export const useTestStore = create<TestStore>((set, get) => ({
 
     let newAnswers;
     if (existingAnswerIndex >= 0) {
-      // Update existing answer
       newAnswers = [...currentAnswers];
       newAnswers[existingAnswerIndex] = { questionId, selectedOption };
     } else {
-      // Add new answer
       newAnswers = [...currentAnswers, { questionId, selectedOption }];
     }
 
